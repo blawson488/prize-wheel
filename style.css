@@ -1,9 +1,20 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.wheel-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 50px auto;
+}
+
 #wheel {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   border: 5px solid #333;
-  margin: 20px auto;
   background: conic-gradient(
     #f8b195 0% 12.5%,     /* Pastel Pink */
     #f67280 12.5% 25%,    /* Muted Coral */
@@ -18,4 +29,28 @@
   top: 0;
   left: 0;
   transform-origin: center;
+}
+
+#pointer {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid black;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+#spinButton {
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
