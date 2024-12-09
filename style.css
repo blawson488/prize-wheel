@@ -3,45 +3,83 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.wheel-container {
-  position: relative;
-  width: 500px; /* Large wheel size */
-  height: 500px;
-  margin: 50px auto;
+h1 {
+  margin-bottom: 20px;
 }
 
-#wheel {
+.wheel-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+#outer-wheel {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 5px solid #333;
   background: conic-gradient(
-    #f8b195 0% 12.5%,     /* Pastel Pink */
-    #f67280 12.5% 25%,    /* Muted Coral */
-    #c06c84 25% 37.5%,    /* Dusty Rose */
-    #6c5b7b 37.5% 50%,    /* Lavender Gray */
-    #355c7d 50% 62.5%,    /* Muted Navy */
-    #99b898 62.5% 75%,    /* Soft Green */
-    #ffcb87 75% 87.5%,    /* Pastel Yellow */
-    #f8e9a1 87.5% 100%    /* Pale Gold */
+    #f8b195 0% 12.5%,     /* Section 1 */
+    #f67280 12.5% 25%,    /* Section 2 */
+    #c06c84 25% 37.5%,    /* Section 3 */
+    #6c5b7b 37.5% 50%,    /* Section 4 */
+    #355c7d 50% 62.5%,    /* Section 5 */
+    #99b898 62.5% 75%,    /* Section 6 */
+    #ffcb87 75% 87.5%,    /* Section 7 */
+    #f8e9a1 87.5% 100%    /* Section 8 */
   );
+  border: 5px solid #333;
   position: absolute;
   top: 0;
   left: 0;
-  transform-origin: center;
 }
 
-#pointer {
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 35px solid black; /* Flipped arrow to point down */
+.section {
   position: absolute;
-  top: -5px; /* Adjust position so the tip touches the circle */
+  width: 50%;
+  height: 50px;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform-origin: left center;
+  text-align: right;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+.section:nth-child(1) { transform: rotate(22.5deg) translateX(100%) rotate(-22.5deg); }
+.section:nth-child(2) { transform: rotate(67.5deg) translateX(100%) rotate(-67.5deg); }
+.section:nth-child(3) { transform: rotate(112.5deg) translateX(100%) rotate(-112.5deg); }
+.section:nth-child(4) { transform: rotate(157.5deg) translateX(100%) rotate(-157.5deg); }
+.section:nth-child(5) { transform: rotate(202.5deg) translateX(100%) rotate(-202.5deg); }
+.section:nth-child(6) { transform: rotate(247.5deg) translateX(100%) rotate(-247.5deg); }
+.section:nth-child(7) { transform: rotate(292.5deg) translateX(100%) rotate(-292.5deg); }
+.section:nth-child(8) { transform: rotate(337.5deg) translateX(100%) rotate(-337.5deg); }
+
+#spinner {
+  width: 80px;
+  height: 80px;
+  background-color: yellow;
+  border-radius: 50%;
+  border: 4px solid #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#center {
+  text-align: center;
+  color: black;
 }
 
 #spinButton {
@@ -54,35 +92,3 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
-
-#labels {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-.label {
-  position: absolute;
-  width: 50%; /* Half the diameter of the wheel */
-  height: 50px;
-  left: 50%;
-  top: 50%;
-  transform-origin: left center;
-  text-align: right;
-  font-size: 18px;
-  font-weight: bold;
-  color: black;
-  white-space: nowrap;
-  line-height: 50px; /* Vertically centers text */
-}
-
-/* Correct rotations to align labels properly */
-.label:nth-child(1) { transform: rotate(22.5deg) translateX(110%) rotate(-22.5deg); }
-.label:nth-child(2) { transform: rotate(67.5deg) translateX(110%) rotate(-67.5deg); }
-.label:nth-child(3) { transform: rotate(112.5deg) translateX(110%) rotate(-112.5deg); }
-.label:nth-child(4) { transform: rotate(157.5deg) translateX(110%) rotate(-157.5deg); }
-.label:nth-child(5) { transform: rotate(202.5deg) translateX(110%) rotate(-202.5deg); }
-.label:nth-child(6) { transform: rotate(247.5deg) translateX(110%) rotate(-247.5deg); }
-.label:nth-child(7) { transform: rotate(292.5deg) translateX(110%) rotate(-292.5deg); }
-.label:nth-child(8) { transform: rotate(337.5deg) translateX(110%) rotate(-337.5deg); }
