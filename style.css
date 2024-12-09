@@ -3,19 +3,27 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.wheel-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+}
+
 #wheel {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   border: 5px solid #333;
-  margin: 20px auto;
   background: conic-gradient(
     red 0% 25%, 
     yellow 25% 50%, 
     blue 50% 75%, 
     green 75% 100%
   );
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   transform-origin: center;
 }
 
@@ -29,7 +37,7 @@ body {
   top: -20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10; /* Ensures it stays on top of the wheel */
+  z-index: 10; /* Keeps the arrow above the wheel */
 }
 
 #spinButton {
