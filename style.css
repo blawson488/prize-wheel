@@ -1,52 +1,21 @@
-body {
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-
-.wheel-container {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 20px auto;
-}
-
 #wheel {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   border: 5px solid #333;
+  margin: 20px auto;
   background: conic-gradient(
-    red 0% 25%, 
-    yellow 25% 50%, 
-    blue 50% 75%, 
-    green 75% 100%
+    #f8b195 0% 12.5%,     /* Pastel Pink */
+    #f67280 12.5% 25%,    /* Muted Coral */
+    #c06c84 25% 37.5%,    /* Dusty Rose */
+    #6c5b7b 37.5% 50%,    /* Lavender Gray */
+    #355c7d 50% 62.5%,    /* Muted Navy */
+    #99b898 62.5% 75%,    /* Soft Green */
+    #ffcb87 75% 87.5%,    /* Pastel Yellow */
+    #f8e9a1 87.5% 100%    /* Pale Gold */
   );
   position: absolute;
   top: 0;
   left: 0;
   transform-origin: center;
-}
-
-#pointer {
-  width: 0; 
-  height: 0; 
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 25px solid black;
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10; /* Keeps the arrow above the wheel */
-}
-
-#spinButton {
-  margin-top: 20px;
-  font-size: 20px;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
