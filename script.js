@@ -9,10 +9,14 @@ spinButton.addEventListener("click", () => {
   setTimeout(() => {
     const finalDegree = randomDegree % 360;
     let prize;
-    if (finalDegree < 90) prize = "Prize 1";
-    else if (finalDegree < 180) prize = "Prize 2";
-    else if (finalDegree < 270) prize = "Prize 3";
-    else prize = "Prize 4";
+    if (finalDegree < 45) prize = "Stickers";
+    else if (finalDegree < 90) prize = "Sticky Hand";
+    else if (finalDegree < 135) prize = "Pop It";
+    else if (finalDegree < 180) prize = "Slinky";
+    else if (finalDegree < 225) prize = "Bouncy Ball";
+    else if (finalDegree < 270) prize = "Parachute Man";
+    else if (finalDegree < 315) prize = "Mini Puzzle";
+    else prize = "Rubber Duck";
 
     alert(`You won: ${prize}`);
   }, 4000); // Match the animation duration
