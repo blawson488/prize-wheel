@@ -36,7 +36,7 @@ body {
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-top: 35px solid black; /* Flip the arrow to point down */
+  border-top: 35px solid black; /* Flipped arrow to point down */
   position: absolute;
   top: -5px; /* Adjust position so the tip touches the circle */
   left: 50%;
@@ -70,19 +70,19 @@ body {
   top: 50%;
   transform-origin: left center;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: black;
   white-space: nowrap;
   line-height: 50px; /* Vertically centers text */
 }
 
-/* Correct rotations to align labels within their sections */
-.label:nth-child(1) { transform: rotate(0deg) translateX(100%) rotate(-90deg); }
-.label:nth-child(2) { transform: rotate(45deg) translateX(100%) rotate(-90deg); }
-.label:nth-child(3) { transform: rotate(90deg) translateX(100%) rotate(-90deg); }
-.label:nth-child(4) { transform: rotate(135deg) translateX(100%) rotate(-90deg); }
-.label:nth-child(5) { transform: rotate(180deg) translateX(100%) rotate(-90deg); }
-.label:nth-child(6) { transform: rotate(225deg) translateX(100%) rotate(-90deg); }
-.label:nth-child(7) { transform: rotate(270deg) translateX(100%) rotate(-90deg); }
-.label:nth-child(8) { transform: rotate(315deg) translateX(100%) rotate(-90deg); }
+/* Correct rotations to align labels properly */
+.label:nth-child(1) { transform: rotate(22.5deg) translateX(110%) rotate(-22.5deg); }
+.label:nth-child(2) { transform: rotate(67.5deg) translateX(110%) rotate(-67.5deg); }
+.label:nth-child(3) { transform: rotate(112.5deg) translateX(110%) rotate(-112.5deg); }
+.label:nth-child(4) { transform: rotate(157.5deg) translateX(110%) rotate(-157.5deg); }
+.label:nth-child(5) { transform: rotate(202.5deg) translateX(110%) rotate(-202.5deg); }
+.label:nth-child(6) { transform: rotate(247.5deg) translateX(110%) rotate(-247.5deg); }
+.label:nth-child(7) { transform: rotate(292.5deg) translateX(110%) rotate(-292.5deg); }
+.label:nth-child(8) { transform: rotate(337.5deg) translateX(110%) rotate(-337.5deg); }
