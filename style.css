@@ -16,6 +16,7 @@ body {
     green 75% 100%
   );
   position: relative;
+  transform-origin: center;
 }
 
 #pointer {
@@ -25,8 +26,10 @@ body {
   border-right: 15px solid transparent;
   border-bottom: 25px solid black;
   position: absolute;
-  top: -30px;
-  left: calc(50% - 15px);
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; /* Ensures it stays on top of the wheel */
 }
 
 #spinButton {
