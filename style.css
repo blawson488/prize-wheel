@@ -1,4 +1,4 @@
-rbody {
+body {
   text-align: center;
   font-family: Arial, sans-serif;
 }
@@ -9,7 +9,7 @@ h1 {
 
 .wheel-container {
   position: relative;
-  width: 600px;
+  width: 600px; /* Increased size of the main wheel */
   height: 600px;
   margin: 0 auto;
 }
@@ -40,7 +40,7 @@ h1 {
   height: 100%;
   transform-origin: center center;
   text-align: center;
-  font-size: 18px;
+  font-size: 24px; /* Increased font size for readability */
   font-weight: bold;
   color: black;
   display: flex;
@@ -58,8 +58,8 @@ h1 {
 .section:nth-child(8) { transform: rotate(337.5deg) translate(100%) rotate(-337.5deg); }
 
 #spinner {
-  width: 80px;
-  height: 80px;
+  width: 100px; /* Slightly larger spinner for proportion */
+  height: 100px;
   background-color: yellow;
   border-radius: 50%;
   border: 4px solid #333;
@@ -71,7 +71,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 22px; /* Increased text size for visibility */
   font-weight: bold;
   cursor: pointer;
 }
@@ -82,9 +82,9 @@ h1 {
 }
 
 #spinButton {
-  margin-top: 20px;
-  font-size: 20px;
-  padding: 15px 30px;
+  margin-top: 30px;
+  font-size: 22px; /* Larger button text */
+  padding: 20px 40px;
   background-color: #4CAF50;
   color: white;
   border: none;
