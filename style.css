@@ -9,8 +9,8 @@ h1 {
 
 .wheel-container {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 600px;
+  height: 600px;
   margin: 0 auto;
 }
 
@@ -57,7 +57,7 @@ h1 {
 .section:nth-child(7) { transform: rotate(292.5deg) translate(100%) rotate(-292.5deg); }
 .section:nth-child(8) { transform: rotate(337.5deg) translate(100%) rotate(-337.5deg); }
 
-#spinner {
+# {
   width: 80px;
   height: 80px;
   background-color: yellow;
